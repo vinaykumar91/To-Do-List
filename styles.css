@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+  padding: 10px;
+}
+
+.to-do-app {
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 35px;
+  border-radius: 10px;
+}
+
+.to-do-app h2 {
+  padding-left: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.to-do-app img {
+  width: 28px;
+  margin-left: 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px auto 5px;
+  width: 100%;
+  border-radius: 30px;
+  background-color: rgba(128, 128, 128, 0.147);
+}
+
+.row #input-box {
+  flex: 1; /*it helps to take the whole width */
+  /* height: 38px; */
+  border: none;
+  outline: none;
+  background: transparent;
+  padding-left: 15px;
+  font-weight: 15px;
+}
+
+.row button {
+  height: 38px;
+  border-radius: 30px;
+  width: 90px;
+  cursor: pointer;
+  background-image: linear-gradient(to right, #48a0d2 -20%, #7dd1c7 180%);
+  border: none;
+  outline: none;
+  transition: 0.65s;
+  color: rgba(0, 0, 0, 0.871);
+}
+
+button:hover {
+  background-position: 90px;
+}
+
+ul {
+  list-style-type: none;
+  font-size: 13px;
+  margin: 20px auto 0px;
+  padding: 5px;
+  font-weight: 500;
+}
+
+ul li {
+  padding: 7px 5px 7px 30px;
+  user-select: none; /* is used to prevent the user from selecting text or other content within an element */
+  cursor: pointer;
+  position: relative;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-image: url(./To-Do-Img/images/unchecked.png);
+  background-size: cover;
+  background-position: cover;
+  left:0px;
+  top:8px;
+}
+
+ul li.checked{
+    color: #3c3b3b;
+    text-decoration: line-through;
+    /* font-weight: 600; */
+}
+
+ul li.checked::before{
+    background-image: url(./To-Do-Img/images/checked.png);
+    filter: sepia(5%) saturate(250%) hue-rotate(90deg) brightness(100%);
+}
+
+ul li span{
+    position: absolute;
+    text-align: center;
+    top:6px;
+    right: 0px;
+    height:22px;
+    width:22px;
+    margin:auto;
+    font-size:16px;
+    color: #555;
+}
+
+ul li span:hover{
+    background-color: rgba(128, 128, 128, 0.375);
+    /* padding:5px; */
+    border-radius: 50%;
+}
+
+@media screen and (max-width:500px)
+{
+    .to-do-app{
+        max-width:100vw;
+        margin:40px 0;
+    }
+    .container{
+        padding: 10px;
+    }
+    button:hover{
+        background-position: 60px;
+    }
+}
