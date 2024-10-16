@@ -130,9 +130,11 @@ ul li span:hover{
 
 @media screen and (max-width:400px)
 {
+  .to-do-app h2 {
+    margin-left: 5px;
+  }
   .row{
-    width:78vw;
-    margin-left: -5px;
+    width:80vw;
   }
   .row #input-box {
     flex: 2.5; /*it helps to take the whole width */
