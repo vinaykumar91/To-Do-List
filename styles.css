@@ -127,16 +127,46 @@ ul li span:hover{
     border-radius: 50%;
 }
 
+
+@media screen and (max-width:400px)
+{
+  .to-do-app h2 {
+    margin-left: -8px;
+  }
+  .row{
+    width:78vw;
+    margin-left: -10px;
+  }
+  .row #input-box {
+    flex: 2.5; /*it helps to take the whole width */
+    /* height: 38px; */
+    width:90%;
+  }
+
+  .row button {
+    flex:1;
+    padding:0px 10px;
+    width: 10%;
+  }
+  ul {
+    /* margin-left: -3px; */
+    font-weight: 500;
+  }
+}
+
 @media screen and (max-width:500px)
 {
     .to-do-app{
-        max-width:100vw;
-        margin:40px 0;
+        /* max-width:100vw; */
+        margin:40px auto;
     }
     .container{
         padding: 10px;
     }
+    .row button {
+      transition: 0s;
+    }
     button:hover{
-        background-position: 60px;
+        background-position: 70px;
     }
 }
